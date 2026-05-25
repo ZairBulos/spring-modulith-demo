@@ -20,3 +20,8 @@ spring:
   docker:
     compose:
       enabled: true
+
+  modulith:
+    events:
+      republish-outstanding-events-on-restart: true
+      completion-mode: archive

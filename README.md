@@ -14,8 +14,8 @@ The domain is intentionally small so the focus stays on architecture — not bus
 
 0. Monolith
 1. Spring Modulith - Fundamentals
-2. **Spring Modulith - Verify & Documenting Application Modules**
-3. Spring Modulith - Application Events
+2. Spring Modulith - Verify & Documenting Application Modules
+3. **Spring Modulith - Application Events**
 4. Spring Modulith - Integration Testing Application Modules
 
 ## Branch: `00-monolith`
@@ -80,3 +80,10 @@ The `subscribers` module listens via `@ApplicationModuleListener` in a dedicated
 `SubscriberListener` — no longer depends on anything from `publications`.
 
 This resolves the cyclic dependency — `ApplicationModulesTest` now passes.
+
+### step-08: durable events
+
+Added `spring-modulith-starter-jpa` to persist events in the `event_publication` table.
+
+Configured `republish-outstanding-events-on-restart` to reprocess incomplete events on startup,
+and `completion-mode: archive` to move completed events to `event_publication_archive`.
