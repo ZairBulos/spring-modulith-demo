@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS subscribers (
+    id      BIGSERIAL PRIMARY KEY,
+    email   VARCHAR(255) NOT NULL UNIQUE
+);

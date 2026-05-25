@@ -1,0 +1,22 @@
+@BASE_URL = http://localhost:8080
+
+### Create subscriber
+POST {{BASE_URL}}/api/subscribers
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com"
+}
+
+### Create publication
+POST {{BASE_URL}}/api/publications
+Content-Type: application/json
+
+{
+  "title": "00. Monolith",
+  "content": "Monolith"
+}
+
+### Get publication by id
+GET {{BASE_URL}}/api/publications/1
+Accept: application/json
