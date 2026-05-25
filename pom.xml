@@ -10,11 +10,11 @@
 	</parent>
 	<groupId>com.zair</groupId>
 	<artifactId>newsletter</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 
 	<name>newsletter</name>
-	<description>02. Spring Modulith - Verify and Documenting Application Modules</description>
-	<url>https://github.com/ZairBulos/spring-modulith-demo/tree/02-verify-documentation</url>
+	<description>03. Spring Modulith - Application Events</description>
+	<url>https://github.com/ZairBulos/spring-modulith-demo/tree/03-application-events</url>
 
 	<properties>
 		<!-- Java version -->

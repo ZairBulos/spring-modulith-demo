@@ -13,8 +13,8 @@ POST {{BASE_URL}}/api/publications
 Content-Type: application/json
 
 {
-  "title": "02. Verify & Documenting Application Modules",
-  "content": "Spring Modulith - Verify & Documenting Application Modules"
+  "title": "03. Application Events",
+  "content": "Spring Modulith - Application Events"
 }
 
 ### Get publication by id
