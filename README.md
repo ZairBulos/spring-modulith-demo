@@ -61,3 +61,8 @@ Added a test that calls `ApplicationModules.verify()` to enforce module boundari
 > This test fails due to a cyclic dependency between modules:
 > - `publications` → `subscribers.SubscriberService`
 > - `subscribers` → `publications.Publication`
+
+### step-06: document application modules
+
+Extended `ApplicationModulesTest` to generate PlantUML diagrams using `Documenter`.
+Output is written to `target/spring-modulith-docs`.
