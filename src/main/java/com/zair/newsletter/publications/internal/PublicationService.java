@@ -1,8 +1,8 @@
 package com.zair.newsletter.publications.internal;
 
-import com.zair.newsletter.publications.Publication;
-import com.zair.newsletter.subscribers.SubscriberService;
+import com.zair.newsletter.publications.PublicationPublished;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 class PublicationService {
 
     private final PublicationRepository repository;
-    private final SubscriberService subscriberService;
+    private final ApplicationEventPublisher publisher;
 
     @Transactional(readOnly = true)
     Publication findById(Long id) {
@@ -21,7 +21,7 @@ class PublicationService {
     @Transactional
     Publication publish(String title, String content) {
         var publication = repository.save(new Publication(title, content));
-        subscriberService.notifySubscribers(publication);
+        publisher.publishEvent(new PublicationPublished(publication.getId(), publication.getTitle()));
         return publication;
     }
 

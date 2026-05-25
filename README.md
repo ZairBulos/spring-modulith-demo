@@ -66,3 +66,17 @@ Added a test that calls `ApplicationModules.verify()` to enforce module boundari
 
 Extended `ApplicationModulesTest` to generate PlantUML diagrams using `Documenter`.
 Output is written to `target/spring-modulith-docs`.
+
+## Branch: `03-application-events`
+
+### step-07: introduce application events
+
+Added `spring-modulith-events-api` to support application events between modules.
+
+Decoupled `publications` and `subscribers` by replacing the direct service call
+with a `PublicationPublished` event published via `ApplicationEventPublisher`.
+
+The `subscribers` module listens via `@ApplicationModuleListener` in a dedicated
+`SubscriberListener` — no longer depends on anything from `publications`.
+
+This resolves the cyclic dependency — `ApplicationModulesTest` now passes.

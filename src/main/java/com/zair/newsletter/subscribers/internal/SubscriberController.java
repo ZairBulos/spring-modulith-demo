@@ -1,6 +1,5 @@
 package com.zair.newsletter.subscribers.internal;
 
-import com.zair.newsletter.subscribers.SubscriberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

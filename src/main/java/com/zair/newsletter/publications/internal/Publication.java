@@ -1,4 +1,4 @@
-package com.zair.newsletter.publications;
+package com.zair.newsletter.publications.internal;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,7 @@ import java.time.Instant;
 @Entity
 @Table(name = "publications")
 @Getter @NoArgsConstructor @AllArgsConstructor
-public class Publication {
+class Publication {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
