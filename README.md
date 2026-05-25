@@ -15,8 +15,8 @@ The domain is intentionally small so the focus stays on architecture — not bus
 0. Monolith
 1. Spring Modulith - Fundamentals
 2. Spring Modulith - Verify & Documenting Application Modules
-3. **Spring Modulith - Application Events**
-4. Spring Modulith - Integration Testing Application Modules
+3. Spring Modulith - Application Events
+4. **Spring Modulith - Integration Testing Application Modules**
 
 ## Branch: `00-monolith`
 
@@ -87,3 +87,13 @@ Added `spring-modulith-starter-jpa` to persist events in the `event_publication`
 
 Configured `republish-outstanding-events-on-restart` to reprocess incomplete events on startup,
 and `completion-mode: archive` to move completed events to `event_publication_archive`.
+
+## Branch: `04-integration-testing`
+
+### step-09: @ApplicationModuleTest
+
+Added an integration test for the `subscribers` module using `@ApplicationModuleTest`.
+The module is bootstrapped in isolation — only the beans belonging to that module are loaded.
+
+Uses the `Scenario` API to publish a `PublicationPublished` event and verify 
+that the `subscribers` module receives and processes it correctly.
