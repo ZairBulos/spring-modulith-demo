@@ -52,3 +52,12 @@ Moved internal classes into a nested `internal` sub-package, making the module b
 ### step-04: add spring-modulith-starter-test
 
 Added `spring-modulith-starter-test` to support module verification and documentation generation in tests.
+
+### step-05: verify application modules structure
+
+Added a test that calls `ApplicationModules.verify()` to enforce module boundaries.
+
+> [!WARNING]
+> This test fails due to a cyclic dependency between modules:
+> - `publications` → `subscribers.SubscriberService`
+> - `subscribers` → `publications.Publication`
