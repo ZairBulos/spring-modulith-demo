@@ -1,6 +1,8 @@
 package com.zair.newsletter.subscribers;
 
 import com.zair.newsletter.publications.Publication;
+import com.zair.newsletter.subscribers.internal.Subscriber;
+import com.zair.newsletter.subscribers.internal.SubscriberRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -14,7 +16,7 @@ public class SubscriberService {
     private final SubscriberRepository repository;
 
     @Transactional
-    Subscriber create(String email) {
+    public Subscriber create(String email) {
         return repository.save(new Subscriber(email));
     }
 

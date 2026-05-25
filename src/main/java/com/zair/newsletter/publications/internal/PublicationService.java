@@ -1,5 +1,6 @@
-package com.zair.newsletter.publications;
+package com.zair.newsletter.publications.internal;
 
+import com.zair.newsletter.publications.Publication;
 import com.zair.newsletter.subscribers.SubscriberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
