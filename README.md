@@ -13,8 +13,8 @@ The domain is intentionally small so the focus stays on architecture — not bus
 ## Agenda
 
 0. Monolith
-1. **Spring Modulith - Fundamentals**
-2. Spring Modulith - Verify & Documenting Application Modules
+1. Spring Modulith - Fundamentals
+2. **Spring Modulith - Verify & Documenting Application Modules**
 3. Spring Modulith - Application Events
 4. Spring Modulith - Integration Testing Application Modules
 
@@ -46,3 +46,9 @@ Moved internal classes into a nested `internal` sub-package, making the module b
 
 > [!NOTE]
 > The IDE will warn about accessing `internal` types from another module, but the project still compiles and runs.
+
+## Branch: `02-verify-documentation`
+
+### step-04: add spring-modulith-starter-test
+
+Added `spring-modulith-starter-test` to support module verification and documentation generation in tests.
