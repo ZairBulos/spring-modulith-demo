@@ -13,8 +13,8 @@ POST {{BASE_URL}}/api/publications
 Content-Type: application/json
 
 {
-  "title": "00. Monolith",
-  "content": "Monolith"
+  "title": "01. Fundamentals",
+  "content": "Spring Modulith - Fundamentals"
 }
 
 ### Get publication by id
