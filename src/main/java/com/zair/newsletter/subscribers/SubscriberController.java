@@ -1,7 +1,5 @@
-package com.zair.newsletter.controllers;
+package com.zair.newsletter.subscribers;
 
-import com.zair.newsletter.entities.Subscriber;
-import com.zair.newsletter.services.SubscriberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

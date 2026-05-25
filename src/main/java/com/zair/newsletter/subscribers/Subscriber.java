@@ -1,4 +1,4 @@
-package com.zair.newsletter.entities;
+package com.zair.newsletter.subscribers;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "subscribers")
 @Getter @NoArgsConstructor @AllArgsConstructor
-public class Subscriber {
+class Subscriber {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,4 +1,4 @@
-package com.zair.newsletter.entities;
+package com.zair.newsletter.publications;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
